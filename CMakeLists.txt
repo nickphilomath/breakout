@@ -56,6 +56,12 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 # Project name
 project(breakout)
 
-add_executable(${PROJECT_NAME} Source/Main.cpp)
+include_directories("Include")
+
+add_executable(${PROJECT_NAME}
+    Source/Main.cpp
+    Source/Application.cpp
+    Source/SceneNode.cpp
+)
 
 target_link_libraries(${PROJECT_NAME} ${SFML_LIBRARIES} ${SFML_DEPENDENCIES})
